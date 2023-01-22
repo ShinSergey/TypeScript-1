@@ -1,6 +1,6 @@
-import Cart from '../service/Cart';
-import Book from './domain/Book';
-import MusicAlbum from './domain/MusicAlbum';
+import Cart from '../ts/service/Cart';
+import Book from '../ts/domain/Book';
+import MusicAlbum from '../ts/domain/MusicAlbum';
 
 test('new card should be empty', () => {
   const cart = new Cart();
