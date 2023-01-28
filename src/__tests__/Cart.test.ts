@@ -10,7 +10,7 @@ test('new card should be empty', () => {
 
 test('new card should be filled', () => {
   const cart = new Cart();
-  cart.add(new Book(1001, 'War and Piece', 'Leo Tolstoy', 2000, 1225));
+  cart.add(new Book(1001, 'War and Peace', 'Leo Tolstoy', 2000, 1225));
   cart.add(new MusicAlbum(1008, 'Meteora', 'Linkin Park', 900));
 
   expect(cart.items.length).toBe(2);
@@ -18,8 +18,10 @@ test('new card should be filled', () => {
 
 test('new card should get', () => {
   const cart = new Cart();
+  cart.add(new Book(1001, 'War and Peace', 'Leo Tolstoy', 2000, 1225));
+  cart.add(new MusicAlbum(1008, 'Meteora', 'Linkin Park', 900));
 
-  expect(cart.get()).toEqual([{
+  expect(cart.items).toEqual([{
     id: 1001,
     name: 'War and Peace',
     author: 'Leo Tolstoy',
